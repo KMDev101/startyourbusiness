@@ -1,5 +1,3 @@
-// script.js
-
 
 $(document).ready(function () {
   /*====================================
@@ -8,6 +6,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $('.preloader').fadeToggle();
   }, 1500);
+
   /*====================================
       Owl carousel
     ======================================*/
@@ -19,6 +18,7 @@ $(document).ready(function () {
     autoplayHoverPause: true,
     dots: false,
     nav: true,
+    smartSpeed: 1000,
     responsive: {
       0: {
         items: 1
@@ -119,23 +119,46 @@ $(document).ready(function () {
   new WOW().init();
 
   /*====================================
-      Mix it up Filter
-    ======================================*/
-  var mixer = mixitup('.project-details');
-  /*====================================
       SlickNav
     ======================================*/
-  $('#nav').slicknav({
+  $('.nav-slick').slicknav({
     label: '',
-    duration: 1000,
+    duration: 500,
     easingOpen: "easeOutBounce", //available with jQuery UI
     prependTo: '.mobile-nav'
   });
-  /*====================================
-        Counter
-      ======================================*/
-  $('.number').counterUp({
-    time: 3000
+  /* ===========================================
+        Counter up for stats
+========================================== */
+  $(function () {
+    $('.counter').counterUp({
+      time: 2000,
+      delay: 10
+    });
   });
 });
+/* ===========================================
+        Portfolio Isotope Filter
+========================================== */
+$(window).on('load', function () {
+  // Initialize Isotope
+  $('#isotope-container').isotope({
+    // options here...
+  });
 
+  // filter items on button click
+  $('#isotope-filters').on('click', '.btn', function () {
+    // Get filter value
+    var filterValue = $(this).attr('data-filter');
+
+    // Filter portfolio Items
+    $('#isotope-container').isotope({
+      // options here...
+      filter: filterValue
+    });
+
+    // active button
+    $('#isotope-filters').find('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+});

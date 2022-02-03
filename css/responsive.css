@@ -1,7 +1,9 @@
-@media (min-width: 424px) {
-  .mobile-nav {
+@media (max-width: 767px) {
+  .mobile-nav,
+  .service-nav {
     display: block;
   }
+
   /* .menu-area is the original menu */
   .menu-area {
     display: none;
@@ -68,7 +70,7 @@
     height: 600px !important;
   }
   .project-details .project-item {
-    width: 45%;
+    width: 100%;
   }
   #video-feature .feature-right .feature-right-content {
     margin-top: 0;
@@ -153,7 +155,7 @@
     font-size: 16px;
   }
   .project-details .project-item {
-    width: 30%;
+    width: 100%;
   }
   .footer-newsletter form {
     width: 50%;
