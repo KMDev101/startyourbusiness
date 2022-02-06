@@ -42,6 +42,14 @@
   /* #clients .owl-theme .owl-nav {
     display: none;
   } */
+  /* Counter */
+  #counter .counter-wrapper .counter-info h2 {
+    font-size: 20px;
+  }
+   
+  #counter .counter-wrapper .counter-info p {
+      font-size: 15px;
+  }
   .footer-newsletter form {
     width: 90%;
   }
@@ -97,6 +105,14 @@
     top: 50%;
     color: #2E2751;
     font-size: 12px;
+  }
+  /* Counter */
+  #counter .counter-wrapper .counter-info h2 {
+    font-size: 30px;
+  }
+   
+  #counter .counter-wrapper .counter-info p {
+      font-size: 15px;
   }
   .footer-newsletter form {
     width: 80%;

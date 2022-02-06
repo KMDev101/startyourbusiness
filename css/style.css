@@ -1317,7 +1317,7 @@ ul.star-list i {
     border-left: 1px solid #666;
 }
 #counter .counter-wrapper .counter-info h2 {
-    font-size: 30px;
+    
     font-weight: 500;
     color: #fff;
     transition: all 0.4s ease;
@@ -1328,7 +1328,7 @@ ul.star-list i {
 }  
 #counter .counter-wrapper .counter-info p {
     color: #eee;
-    font-size: 15px;
+    
     text-transform: capitalize;
     font-weight: 500;
     margin-top: 2px;
